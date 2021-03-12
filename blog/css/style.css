@@ -1,0 +1,283 @@
+/* TO GET AN IDEA OF THE CSS YOU WILL LIKELY BE USING, SEE THE LISTS BELOW. */
+
+        /*
+
+        Spacing
+
+            - padding (shorthand and/or specific properties like padding-bottom, etc.)
+
+            - margin, (shorthand and/or specific properties like margin-top, etc.)
+
+            - letter-spacing, word-spacing, line-height
+
+            - width, max-width, min-width
+            - height, max-height, min-height
+
+        Typography
+
+            - font-family, font-size, font-style, font-weight
+
+            - text-decoration, text-align
+
+            - color
+
+            - text-shadow, text-transform
+
+        Box, Layout and Border
+
+            - border (shorthand and/or specific properties like border-top, border-bottom-radius, border-width, etc.)
+
+            - box-shadow
+
+            - display, float, align-items, align-content
+
+            - grid-template-columns, grid-column-gap
+
+            - transform
+
+        Other
+
+            - :nth()-child (to target specific child elements)
+
+            - :focus, :hover, :active (to target link states)
+
+            - @font-face or @import (to import typefaces)
+
+        */
+
+
+/* ------ START WRITING YOUR CODE BELOW ------ */
+
+@font-face {
+  font-family:serif;
+  src: url(blog/fonts/serif);
+  font-weight:normal;
+  font-style:normal;
+}
+
+@font-face {
+  font-family: "sans-serif";
+  src: url(blog/fonts/serif);
+  font-style:normal;
+}
+
+@font-face {
+  font-family: "ultra";
+  src: url(blog/fonts/serif/ultra-regular.ttf);
+  font-style:normal;
+}
+
+@font-face {
+  font-family: "opensans";
+  src: url(blog/fonts/sans-serif/opensans-regular.ttf);
+  font-style:normal;
+}
+
+{
+  box-sizing: border-box;
+}
+
+.title {
+transform: rotate(-4deg);
+text-shadow: 2px 2px;
+text-align: center;
+}
+
+.highlight{
+background-color: #CD5C5C;
+font-family: "ultra", serif;
+text-transform: uppercase;
+box-shadow: 5px 10px;
+border-radius: 12px;
+color:floralwhite;
+padding-left: 10px;
+padding-right: 10px;
+}
+
+nav{
+  width: 100%;
+  border-bottom: 1px solid black;
+  border-top: 1px solid black;
+}
+
+nav ul{
+  overflow: auto;
+  list-style-type: none;
+}
+
+nav li{
+  float:left;
+  text-align: center;
+  width: 10%;
+  padding: 3px;
+  font-size: 1.5rem;
+  font-family: "opensans", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: darkblue;
+}
+
+.main-container {
+  min-height: 100vh;
+  overflow: auto;
+  display: block;
+  padding-bottom: 100px;
+}
+
+.article-image{
+  float: left;
+  width: 100%;
+  max-width: 25rem;
+  padding-left: .5rem;
+  padding-right: .1rem;
+}
+
+.main-section {
+  float: left;
+  width: 75%;
+  padding-left: 2rem;
+  padding-right: .5rem;
+}
+
+.column {
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+  padding: .1rem;
+  width: 33%;
+}
+
+.right-section {
+  border-left: 1px solid black;
+  padding-bottom: 1.5rem;
+  padding-top: 1.5rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  width:25%;
+  float:right;
+  line-height: 1rem;
+}
+
+.right-section p {
+  font-size: .8rem;
+}
+
+.button {
+  border: none;
+  background-color: #034f84;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  border-radius: 12px;
+  font-family: "ultra", serif;
+  font: 15px "ultra", serif;
+  text-transform: uppercase;
+  box-shadow: 5px 10px;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+img {
+  width: 99%;
+  padding: 0;
+  margin: 0;
+}
+
+.footer {
+  position: static;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+
+  font-size: .1rem;
+  letter-spacing: 1px;
+  font-size: .5rem;
+  color: #262626;
+  margin-left: 1rem;
+}
+
+.footer p{
+  font-size: .25rem;
+  word-spacing: normal;
+  color: #262626;
+  line-height: .25rem;
+}
+
+.footer a{
+  color: darkgray;
+}
+
+.footer-left{
+  text-align: left;
+}
+
+.footer-right {
+  text-align: right;
+  padding-right: 2rem;
+}
+
+.figcaption {
+  width: 99%;
+  background-color: beige;
+  font-size: .8rem;
+  font-family: sans-serif;
+  padding: .5rem;
+}
+
+.expand {
+  letter-spacing: 0;
+}
+
+p {
+  font-family: sans-serif;
+}
+
+html {
+  font-family: sans-serif;
+  letter-spacing: 0.125rem;
+  line-height: 1.5rem;
+}
+
+h1 {
+  font-family: sans-serif;
+  letter-spacing: 0.125rem;
+  font-size: 4.25rem;
+  text-align: center;
+  padding-top: 2.75rem;
+  padding-bottom: 2.75rem;
+}
+
+h2 {
+  font-family: sans-serif;
+  letter-spacing: 0.125rem;
+  font-size: 1.25rem;
+  padding-left: 1.5rem;
+  padding-top: 2rem;
+  padding-bottom: 0;
+}
+
+p {
+  font-size: 1rem;
+  letter-spacing: 0.031rem;
+  word-spacing: 0.5rem;
+  color: #262626;
+}
+
+h3 {
+  font-family:sans-serif;
+  letter-spacing: 0.125rem;
+  font-size: 1rem;
+}
+
+time {
+  font-size: .75rem;
+  font-family: serif;
+  font-style: italic;
+}
